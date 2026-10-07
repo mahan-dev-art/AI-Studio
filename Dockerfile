@@ -1,4 +1,3 @@
-```dockerfile
 FROM python:3.11-slim
 
 # Prevent Python from writing .pyc files and buffer logs
@@ -32,4 +31,3 @@ EXPOSE 5000
 
 # Run Flask with Gunicorn
 CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-5000} --workers 2 --threads 4 --timeout 120 app:app"]
-```
